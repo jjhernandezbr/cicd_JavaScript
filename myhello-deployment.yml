@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myhello
+  name: myhello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myhello
+  template:
+    metadata:
+      labels:
+        app: myhello
+    spec:
+      containers:
+      - name: myhello
+        image: jjhernandezbr/hello-app:amd64
+          
